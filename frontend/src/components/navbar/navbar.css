@@ -1,0 +1,82 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 7px;
+    box-shadow: 0 1px 3px 5px black;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo p {
+    color: white;
+    font-size: 38px;
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.nav-menu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.nav-menu hr {
+    border: none;
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    background: orange;
+}
+
+
+.nav-order {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.takeout {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-order button {
+    width: 157px;
+    height: 58px;
+    outline: none;
+    border: 1px;
+    border-radius: 75px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: orange;
+    cursor: pointer;
+}
+
+.nav-order button:active {
+    background-color: darkorange;
+}
