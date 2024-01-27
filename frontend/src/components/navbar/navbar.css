@@ -94,3 +94,9 @@
     background-color: red;
     color: white;
 }
+
+.call {
+    width: 38px;
+    height: 38px;
+    margin-left: -20px;
+}
