@@ -1,6 +1,6 @@
 import React from 'react'
 
-function BookTable() {
+const BookTable = () => {
     return (
         <div>BookTable</div>
     )
