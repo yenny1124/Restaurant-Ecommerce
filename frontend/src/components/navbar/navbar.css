@@ -59,9 +59,9 @@
     gap: 45px;
 }
 
-.takeout {
-    width: 50px;
-    height: 50px;
+.cart {
+    width: 60px;
+    height: 60px;
 }
 
 .nav-order button {
@@ -79,4 +79,18 @@
 
 .nav-order button:active {
     background-color: darkorange;
+}
+
+.nav-cart-count {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -35px;
+    margin-left: -55px;
+    border-radius: 11px;
+    font-size: 14px;
+    background-color: red;
+    color: white;
 }

@@ -16,7 +16,8 @@ export const Navbar = () => {
             </ul>
             <div className='nav-order'>
                 <button>Order Online</button>
-                {/* <img className='takeout' src='../cart.png' /> */}
+                <img className='cart' src='/cart.png' />
+                <div className='nav-cart-count'>0</div>
             </div>
 
         </div>
