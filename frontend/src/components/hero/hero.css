@@ -19,16 +19,18 @@
     color: ivory;
     font-size: 22px;
     font-weight: 600;
-    margin-bottom: -150px;
     margin-top: -100px;
+    margin-bottom: -100px;
     text-transform: uppercase;
+
 }
+
 
 .hero-left p {
     color: ivory;
     font-size: 55px;
     font-weight: 660;
-    padding: 10px;
+    padding: 5px;
 }
 
 .hero-sushi-icon {
@@ -39,14 +41,13 @@
 }
 
 .sushi {
-    margin-left: 50px;
+    margin-left: 330px;
+    margin-bottom: -50px;
+    margin-top: -50px;
     width: 200px;
     height: 200px;
 }
 
-.hero-hand-icon img {
-    width: 105px;
-}
 
 .hero-ordernow-btn {
     display: flex;

@@ -6,10 +6,10 @@ const Hero = () => {
         <div className='hero'>
             <div className='hero-left'>
                 <h2> Pure Freshness Served</h2>
+                <img className='sushi' src="/sushi.png" alt="" />
                 <div>
                     <div className='hand-sushi-icon'>
-                        <em><p>"Experience
-                            <img className='sushi' src="/sushi.png" alt="" /></p>
+                        <em><p>"Experience</p>
                             <p>New Artistry of Sushi,</p>
                             <p>New Journey of Flavors"</p></em>
                     </div>
