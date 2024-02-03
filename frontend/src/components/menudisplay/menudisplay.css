@@ -1,5 +1,9 @@
-.items {
+.menudisplay {
     height: 100vh;
     background: black;
     display: flex;
+}
+
+h2 {
+    color: white;
 }

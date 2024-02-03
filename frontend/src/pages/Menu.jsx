@@ -1,10 +1,10 @@
 import React from 'react'
-import Items from '../components/items/Items'
+import MenuDisplay from '../components/menudisplay/MenuDisplay'
 
 const Menu = () => {
     return (
         <div>
-            <Items />
+            <MenuDisplay />
         </div>
     )
 }
