@@ -15,6 +15,7 @@
 }
 
 .nav-logo {
+    font-family: cursive;
     display: flex;
     align-items: center;
     gap: 10px;
