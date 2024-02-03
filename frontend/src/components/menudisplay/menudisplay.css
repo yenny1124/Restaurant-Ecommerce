@@ -1,9 +1,22 @@
 .menudisplay {
-    height: 100vh;
-    background: black;
+    background-color: black;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
 }
 
-h2 {
+.menudisplay h1 {
+    font-family: cursive;
     color: white;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.menudisplay hr {
+    width: 200px;
+    height: 5px;
+    border-radius: 10px;
+    background: ivory;
 }
