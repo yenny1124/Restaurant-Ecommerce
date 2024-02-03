@@ -7,7 +7,7 @@ import About from './pages/About';
 import BookTable from './pages/BookTable';
 import Cart from './pages/Cart';
 import OrderOnline from './pages/OrderOnline';
-
+import Footer from './components/footer/Footer';
 
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
           <Route path='/cart' element={<Cart />} />
           <Route path='/orderonline' element={<OrderOnline />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );
