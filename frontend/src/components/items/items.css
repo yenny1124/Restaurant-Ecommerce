@@ -1,0 +1,5 @@
+.items {
+    height: 100vh;
+    background: black;
+    display: flex;
+}
