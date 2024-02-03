@@ -13,7 +13,7 @@ const Footer = () => {
                                 Contact Us
                             </h4>
                             <div class="footer-contacts-links" >
-                                <a href="">
+                                <a href="https://www.google.com/maps/dir/47.8574546,-122.2700132/rolls+and+rolls+plus+sushi+google+map/@47.7373183,-122.4203145,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x54906c8c5f96a9a5:0x6902e0c9eb452bae!2m2!1d-122.1934713!2d47.6208451?entry=ttu">
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                                     <span>Location</span>
                                 </a>
@@ -60,6 +60,13 @@ const Footer = () => {
                             <p>
                                 10:30 am - 9:00 pm
                             </p>
+                            {/* <br /><br />
+                            <p>
+                                Sunday & Monday
+                            </p>
+                            <p>
+                                Closed
+                            </p> */}
                         </div>
                     </div>
                 </div>

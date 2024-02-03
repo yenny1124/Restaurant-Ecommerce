@@ -49,7 +49,7 @@
 }
 
 
-.hero-ordernow-btn {
+/* .hero-ordernow-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,11 +58,32 @@
     height: 70px;
     border-radius: 75px;
     margin-top: 30px;
-    /* margin-left: 400px; */
     background-color: orange;
     font-size: 22px;
     font-weight: 500;
+} */
+
+.hero-ordernow button {
+    width: 200px;
+    height: 70px;
+    outline: none;
+    border: 1px;
+    border-radius: 75px;
+    color: black;
+    background-color: orange;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
 }
+
+.hero-ordernow button:hover {
+    background-color: darkorange;
+}
+
+.hero-ordernow button:active {
+    background-color: darkorange;
+}
+
 
 .hero-right {
     flex: 1;

@@ -60,10 +60,6 @@
     gap: 45px;
 }
 
-.cart {
-    width: 60px;
-    height: 60px;
-}
 
 .nav-order button {
     width: 157px;
@@ -78,8 +74,22 @@
     cursor: pointer;
 }
 
+.nav-order button:hover {
+    background-color: darkorange;
+}
+
 .nav-order button:active {
     background-color: darkorange;
+}
+
+.nav-order i {
+    font-size: 40px;
+    margin-left: -30px;
+    color: ivory;
+}
+
+.nav-order i:hover {
+    color: #ffbe33;
 }
 
 .nav-cart-count {
@@ -94,10 +104,4 @@
     font-size: 14px;
     background-color: red;
     color: white;
-}
-
-.call {
-    width: 38px;
-    height: 38px;
-    margin-left: -30px;
 }

@@ -17,9 +17,9 @@ export const Navbar = () => {
             </ul>
             <div className='nav-order'>
                 <Link to='/orderonline'><button>Order Online</button></Link>
-                <Link to='/cart'><img className='cart' src='/cart.png' /></Link>
+                <Link to='/cart'><i class="fa fa-shopping-cart" /></Link>
                 <div className='nav-cart-count'>0</div>
-                <img className='call' src="/call.png" alt="" />
+                <i class="fa fa-phone" aria-hidden="true"></i>
             </div>
 
         </div>
