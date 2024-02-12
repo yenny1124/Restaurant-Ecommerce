@@ -1,5 +1,5 @@
 .footer {
-    background-color: black;
+    background-color: #0c0c0c;
     color: #ffffff;
     padding: 75px 0 40px 0;
     text-align: center;
@@ -93,7 +93,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    color: #222831;
+    color: #0c0c0c;
     width: 40px;
     height: 40px;
     border-radius: 100%;

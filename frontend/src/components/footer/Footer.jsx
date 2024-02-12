@@ -7,7 +7,7 @@ const Footer = () => {
         <div className='footer'>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 footer-col">
+                    <div class="col">
                         <div class="footer-contacts">
                             <h4>
                                 Contact Us
@@ -29,7 +29,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div class="col-md-4 footer-col">
+                    <div class="col">
                         <div class="footer-details">
                             <a href="" class="footer-logo" style={{ textDecoration: 'none' }}>
                                 {/* <img src='../logo.png' /> */}
@@ -49,7 +49,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 footer-col">
+                    <div class="col">
                         <div className='hours-container'>
                             <h4>
                                 Opening Hours

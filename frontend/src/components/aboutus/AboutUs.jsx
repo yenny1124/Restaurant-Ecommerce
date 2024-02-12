@@ -6,7 +6,7 @@ const AboutUs = () => {
         <div className="about-container">
             <div className="text-content">
                 <h2>About Us</h2>
-                <p>Welcome to [Your Restaurant's Name], a place where traditional flavors meet modern dining...</p>
+                <p>Welcome to <strong><em>Rolls & Rolls</em></strong>, a place where traditional flavors meet modern dining...</p>
                 <br />
                 <p>
                     There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
