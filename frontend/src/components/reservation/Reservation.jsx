@@ -1,6 +1,7 @@
 import React from 'react'
 import './reservation.css';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import { Link } from 'react-router-dom';
 
 const mapContainerStyle = {
     width: '100%',
@@ -39,7 +40,7 @@ const Reservation = () => {
                                     <input type="date" className="form-control" />
                                 </div>
                                 <div className="btn_box">
-                                    <button>Book Now</button>
+                                    <Link to='/bookingdone'><button>Book Now</button></Link>
                                 </div>
                             </form>
                         </div>

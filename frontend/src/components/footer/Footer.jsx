@@ -1,5 +1,6 @@
 import React from 'react'
 import './footer.css'
+import { Link } from 'react-router-dom'
 import { transform } from 'framer-motion'
 
 const Footer = () => {
@@ -19,11 +20,11 @@ const Footer = () => {
                                 </a>
                                 <a href="">
                                     <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <span>Call +01 425 454 4313</span>
+                                    <Link to='/'><span>Call +01 425 454 4313</span></Link>
                                 </a>
                                 <a href="">
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <span>powermaju87@gmail.com</span>
+                                    <Link to='/'><span>powermaju87@gmail.com</span></Link>
                                 </a>
                             </div>
                         </div>

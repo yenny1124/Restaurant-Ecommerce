@@ -6,7 +6,7 @@ export const Navbar = () => {
     return (
         <div className='navbar'>
             <div className='nav-logo'>
-                <img className='logo' src='../logo.png' />
+                <Link to='/'><img className='logo' src='../logo.png' /></Link>
                 <p>Rolls & Rolls</p>
             </div>
             <ul className='nav-menu'>
@@ -19,7 +19,7 @@ export const Navbar = () => {
                 <Link to='/orderonline'><button>Order Online</button></Link>
                 <Link to='/cart'><i class="fa fa-shopping-cart" /></Link>
                 <div className='nav-cart-count'>0</div>
-                <i class="fa fa-phone" aria-hidden="true"></i>
+                <Link to='/'><i class="fa fa-phone" aria-hidden="true"></i></Link>
             </div>
 
         </div>

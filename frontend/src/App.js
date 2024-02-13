@@ -8,7 +8,7 @@ import BookTable from './pages/BookTable';
 import Cart from './pages/Cart';
 import OrderOnline from './pages/OrderOnline';
 import Footer from './components/footer/Footer';
-
+import BookingDone from './pages/BookingDone';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
           <Route path='/menu' element={<Menu />} />
           <Route path='/about' element={<About />} />
           <Route path='/booktable' element={<BookTable />} />
+          <Route path='/bookingdone' element={<BookingDone />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/orderonline' element={<OrderOnline />} />
         </Routes>
