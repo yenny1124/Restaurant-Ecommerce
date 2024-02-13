@@ -1,18 +1,20 @@
 import React from 'react'
 import './menudisplay.css'
-import data_items from '../assets/data'
+import SushiCard from '../sushicard/SushiCard'
 
 const MenuDisplay = () => {
     return (
         <div className='menudisplay'>
-            <h1>Our Menu</h1>
+            <h1 className='title'>Our Menu</h1>
             <hr />
-            <div className='menu-items'>
-                {data_items.map((item)=>{
-                    return 
-                })}
+            <div className='card-wrapper'>
+                <SushiCard />
+                <SushiCard />
+                <SushiCard />
+                <SushiCard />
+                <SushiCard />
+                <SushiCard />
             </div>
-
         </div>
     )
 }

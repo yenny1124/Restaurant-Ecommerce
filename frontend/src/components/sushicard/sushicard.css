@@ -1,0 +1,33 @@
+.sushicard-container {
+    width: 22%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+.sushicard-container .sushi-img {
+    width: 400px;
+    height: 400px;
+}
+
+.sushicard-container .sushi-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d1411e;
+}
+
+.sushicard-container .sushi-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: ivory;
+}
+
+
+.sushicard-container .sushi-desc {
+    text-align: center;
+    color: ivory;
+}
