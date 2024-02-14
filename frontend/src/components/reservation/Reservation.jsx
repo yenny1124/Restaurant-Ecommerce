@@ -39,6 +39,9 @@ const Reservation = () => {
                                 <div>
                                     <input type="date" className="form-control" />
                                 </div>
+                                <div>
+                                    <input type="time" className="form-control" />
+                                </div>
                                 <div className="btn_box">
                                     <Link to='/bookingdone'><button>Book Now</button></Link>
                                 </div>
