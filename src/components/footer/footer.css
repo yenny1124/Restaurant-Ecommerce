@@ -1,0 +1,141 @@
+.footer {
+    background-color: #0c0c0c;
+    color: #ffffff;
+    padding: 75px 0 40px 0;
+    text-align: center;
+}
+
+.footer .row {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+
+}
+
+.footer h4 {
+    font-size: 35px;
+}
+
+.footer h4,
+.footer-logo {
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: cursive;
+    color: white;
+}
+
+.footer p {
+    color: white;
+    padding: 5px;
+}
+
+.footer-col {
+    margin-bottom: 50px;
+}
+
+.footer-contacts-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.footer-contacts-links a {
+    margin: 5px 0;
+    color: ivory;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.footer-contacts-links a i {
+    margin-right: 5px;
+}
+
+.footer-contacts-links a:hover {
+    color: #ffbe33;
+}
+
+.footer-logo {
+    font-family: cursive;
+    display: block;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1;
+    color: #ffffff;
+}
+
+/* .footer-logo img {
+    width: 70px;
+    height: 70px;
+} */
+
+.footer-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-social a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #0c0c0c;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    border-radius: 100%;
+    margin: 0 2.5px;
+    font-size: 30px;
+}
+
+.footer-social a:hover {
+    color: #ffbe33;
+}
+
+.hours-container p {
+    font-size: 20px;
+}
+
+.footer-info {
+    text-align: center;
+    margin-top: 25px;
+    padding: 5px;
+}
+
+.footer-info hr {
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+    height: 1px;
+    background: #c7c7c7;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.footer-info p {
+    color: #ffffff;
+    margin: 0;
+    font-size: 20px;
+}
+
+.footer-info p a {
+    color: inherit;
+    text-decoration: none;
+}

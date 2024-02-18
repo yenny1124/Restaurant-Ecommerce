@@ -1,0 +1,42 @@
+.about-container {
+    height: 80vh;
+    padding: 30px;
+    background-color: #0c0c0c;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two equal columns */
+    gap: 20px;
+    /* Space between columns */
+    align-items: center;
+    /* Align items vertically */
+}
+
+.text-content,
+.image-content {
+    padding: 20px;
+}
+
+.text-content {
+    padding: 20px;
+    padding-left: 100px;
+    color: ivory;
+    /* Increase left padding */
+}
+
+.text-content p {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.text-content h2 {
+    font-family: cursive;
+    font-size: 50px;
+}
+
+.image-content img {
+    width: 80%;
+    /* Make the image fill the column */
+    height: auto;
+    border-radius: 50px;
+    /* Maintain aspect ratio */
+}

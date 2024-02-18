@@ -1,0 +1,32 @@
+.menudisplay {
+    background-color: #0c0c0c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 200vh;
+}
+
+.menudisplay .title {
+    margin-top: 30px;
+    font-family: cursive;
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.menudisplay hr {
+    width: 200px;
+    height: 5px;
+    border-radius: 10px;
+    background: ivory;
+}
+
+.menudisplay .card-wrapper {
+    gap: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
