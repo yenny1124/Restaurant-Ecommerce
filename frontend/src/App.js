@@ -9,6 +9,8 @@ import Cart from './pages/Cart';
 import OrderOnline from './pages/OrderOnline';
 import Footer from './components/footer/Footer';
 import BookingDone from './pages/BookingDone';
+import Product from './components/products/Product[id]';
+import Order from './components/orders/Order[id]';
 
 function App() {
   return (
@@ -23,6 +25,11 @@ function App() {
           <Route path='/bookingdone' element={<BookingDone />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/orderonline' element={<OrderOnline />} />
+
+
+          <Route path='/order' element={<Order />} />
+          <Route path='/product' element={<Product />} />
+
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -48,7 +48,7 @@ const Product = () => {
                             name="no"
                             className='ingredients-option-checkbox'
                         />
-                        <label htmlFor="cucumber">No Cucumber</label>
+                        <label className='label' htmlFor="cucumber">No Cucumber</label>
                     </div>
                 </div>
                 <div className='add-to-cart'>
