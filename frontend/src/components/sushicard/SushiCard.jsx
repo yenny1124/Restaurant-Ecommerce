@@ -1,5 +1,6 @@
 import React from 'react'
 import './sushicard.css';
+import { Link } from 'react-router-dom'
 
 const SushiCard = () => {
     // const images = [
@@ -16,6 +17,7 @@ const SushiCard = () => {
             <p className='sushi-desc'>
                 Avacado, Crabmeat, Cucumber
             </p>
+
         </div>
     )
 }
