@@ -1,7 +1,15 @@
 import React from 'react'
 import './order[id].css';
+import styles from './order[id].css'; // Update the path to your CSS file
 
 const Order = () => {
+    const status = 0;
+
+    const statusClass = (index) => {
+        if (index - status < 1) return styles.done;
+        if (index - status === 1) return styles.inProgress;
+        if (index - status > 1) return styles.undone;
+    };
     return (
         <div className='order-container'>
             <div className='left'>
@@ -30,60 +38,36 @@ const Order = () => {
                     </table>
                 </div>
                 <div className='row'>
-                    <div className='status'>
+                    <div className={statusClass(0)}>
                         <i class="fa fa-credit-card" aria-hidden="true"></i>
                         {/* <img src="/img/paid.png" width={30} height={30} alt="" /> */}
                         <span>Payment</span>
                         <div className='checkedIcon'>
-                            <img
-                                className='checkedIcon'
-                                src="/img/checked.png"
-                                width={20}
-                                height={20}
-                                alt=""
-                            />
+                            <i class="fa fa-check-square-o" aria-hidden="true"></i>
                         </div>
                     </div>
-                    <div className='status'>
+                    <div className={statusClass(1)}>
                         <i class="fa fa-credit-card" aria-hidden="true"></i>
                         {/* <img src="/img/paid.png" width={30} height={30} alt="" /> */}
-                        <span>Payment</span>
+                        <span>Preparing</span>
                         <div className='checkedIcon'>
-                            <img
-                                className='checkedIcon'
-                                src="/img/checked.png"
-                                width={20}
-                                height={20}
-                                alt=""
-                            />
+                            <i class="fa fa-check-square-o" aria-hidden="true"></i>
                         </div>
                     </div>
-                    <div className='status'>
+                    <div className={statusClass(2)}>
                         <i class="fa fa-credit-card" aria-hidden="true"></i>
                         {/* <img src="/img/paid.png" width={30} height={30} alt="" /> */}
-                        <span>Payment</span>
+                        <span>Ready to PickUp</span>
                         <div className='checkedIcon'>
-                            <img
-                                className='checkedIcon'
-                                src="/img/checked.png"
-                                width={20}
-                                height={20}
-                                alt=""
-                            />
+                            <i class="fa fa-check-square-o" aria-hidden="true"></i>
                         </div>
                     </div>
-                    <div className='status'>
+                    <div className={statusClass(3)}>
                         <i class="fa fa-credit-card" aria-hidden="true"></i>
                         {/* <img src="/img/paid.png" width={30} height={30} alt="" /> */}
-                        <span>Payment</span>
+                        <span>Picked Up</span>
                         <div className='checkedIcon'>
-                            <img
-                                className='checkedIcon'
-                                src="/img/checked.png"
-                                width={20}
-                                height={20}
-                                alt=""
-                            />
+                            <i class="fa fa-check-square-o" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
