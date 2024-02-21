@@ -1,4 +1,89 @@
 const ProductModel = require('../models/productModel')
+const CategoryModel = require('../models/categoryModel'); // Adjust the path as necessary
+
+// Function to get all categories
+module.exports.getCategories = async (req, res) => {
+    try {
+        const categories = await CategoryModel.find({});
+        res.status(200).json(categories);
+    } catch (err) {
+        console.error("Error fetching categories:", err);
+        res.status(500).json({ error: err.message, msg: "Something went wrong!" });
+    }
+};
+
+// Function to create a new category
+module.exports.createCategory = async (req, res) => {
+    try {
+        const { name } = req.body;
+
+        const categoryExists = await CategoryModel.findOne({ name });
+        if (categoryExists) {
+            return res.status(400).json({ message: "Category already exists" });
+        }
+
+        const category = new CategoryModel({ name });
+        const savedCategory = await category.save();
+
+        res.status(201).json(savedCategory);
+    } catch (err) {
+        res.status(500).json({ message: "An error occurred while creating the category", error: err });
+    }
+};
+
+// Function to get a single category by its ID
+module.exports.getCategoryById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const category = await CategoryModel.findById(id);
+
+        if (!category) {
+            return res.status(404).json({ message: "Category not found" });
+        }
+
+        res.status(200).json(category);
+    } catch (err) {
+        console.error("Error fetching category by ID:", err);
+        res.status(500).json({ error: err.message, msg: "Something went wrong!" });
+    }
+};
+
+// Function to update a category by its ID
+module.exports.updateCategoryById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const updateData = req.body;
+
+        const updatedCategory = await CategoryModel.findByIdAndUpdate(id, updateData, { new: true });
+
+        if (!updatedCategory) {
+            return res.status(404).json({ message: "Category not found" });
+        }
+
+        res.status(200).json(updatedCategory);
+    } catch (err) {
+        console.error("Error updating category by ID:", err);
+        res.status(500).json({ error: err.message, msg: "Something went wrong!" });
+    }
+};
+
+// Function to delete a single category by its ID
+module.exports.deleteCategoryById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const category = await CategoryModel.findByIdAndDelete(id);
+
+        if (!category) {
+            return res.status(404).json({ message: "Category not found" });
+        }
+
+        res.status(200).json({ message: "Category deleted successfully" });
+    } catch (err) {
+        console.error("Error deleting category by ID:", err);
+        res.status(500).json({ error: err.message, msg: "Something went wrong!" });
+    }
+};
+
 
 // get all products from DB
 module.exports.getProducts = async (req, res) => {
