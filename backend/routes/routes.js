@@ -1,5 +1,6 @@
 const { Router } = require("express")
-const { getProducts, updateProduct } = require("../controllers/productController")
+// Add saveProduct and deleteProduct to the imported functions
+const { getProducts, saveProduct, updateProduct, deleteProduct } = require("../controllers/productController");
 
 const router = Router()
 

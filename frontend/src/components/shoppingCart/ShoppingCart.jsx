@@ -9,7 +9,7 @@ const ShoppingCart = () => {
                     <tr className='trTitle'>
                         <th>Product</th>
                         <th>Name</th>
-                        <th>Extras</th>
+                        <th>Options</th>
                         <th>Price</th>
                         <th>Quantity</th>
                         <th>Total</th>

@@ -21,7 +21,7 @@ const Product = () => {
                 <h1 className='sushi-title'>{sushi.name}</h1>
                 <span className='price'>${sushi.price}</span>
                 <p className='desc'>{sushi.desc}</p>
-                <h3 className='choose'>Choose additional ingredients</h3>
+                <h3 className='choose'>Choose options for ingredients</h3>
                 <div className='ingredients'>
                     <div className='ingredients-option'>
                         <input
