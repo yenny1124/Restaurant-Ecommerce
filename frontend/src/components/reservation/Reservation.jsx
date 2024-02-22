@@ -16,34 +16,34 @@ const center = {
 const Reservation = () => {
     return (
         <div className="book_section">
-            <div className="container">
-                <div className="heading_container">
+            <div className="book-container">
+                <div className="book-heading_container">
                     <h2>Book A Table</h2>
                 </div>
                 <div className="row">
                     <div className="col">
-                        <div className="form_container">
+                        <div className="bookform_container">
                             <form action="">
                                 <div>
-                                    <input type="text" className="form-control" placeholder="Your Name" />
+                                    <input type="text" className="bookform-control" placeholder="Your Name" />
                                 </div>
                                 <div>
-                                    <input type="text" className="form-control" placeholder="Phone Number" />
+                                    <input type="text" className="bookform-control" placeholder="Phone Number" />
                                 </div>
                                 <div>
-                                    <input type="email" className="form-control" placeholder="Your Email (*optional)" />
+                                    <input type="email" className="bookform-control" placeholder=" Your Email (*optional)" />
                                 </div>
                                 <div>
-                                    <input type="number" className="form-control" min="1" placeholder="Number of People" />
+                                    <input type="number" className="bookform-control" min="1" placeholder="Number of People" />
                                 </div>
                                 <div>
-                                    <input type="date" className="form-control" />
+                                    <input type="date" className="bookform-control" />
                                 </div>
                                 <div>
-                                    <input type="time" className="form-control" />
+                                    <input type="time" className="bookform-control" />
                                 </div>
                                 <div className="btn_box">
-                                    <Link to='/bookingdone'><button>Book Now</button></Link>
+                                    <Link to='/bookingdone'><button className='book-btn'>Book Now</button></Link>
                                 </div>
                             </form>
                         </div>

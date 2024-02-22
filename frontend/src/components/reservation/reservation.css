@@ -5,21 +5,26 @@
     color: ivory;
 }
 
-.book_section .heading_container h2 {
+/* .book_section .book-container {
+    margin-left: 10px;
+} */
+
+.book_section .book-heading_container h2 {
     font-size: 50px;
     margin-top: -50px;
 }
 
-.book_section .heading_container {
+.book_section .book-heading_container {
     font-family: cursive;
 }
 
-.book_section .form_container {
+.book_section .bookform_container {
     color: black;
+    /* padding-left: 20px; */
 }
 
 
-.book_section .form_container .form-control {
+.book_section .bookform_container .bookform-control {
     width: 100%;
     border: none;
     height: 50px;
@@ -35,12 +40,12 @@
     font-size: 20px;
 }
 
-.book_section .form_container .form-control::placeholder {
+.book_section .bookform_container .bookform-control::placeholder {
     color: gray;
 }
 
 
-.book_section .form_container button {
+.book_section .bookform_container .book-btn {
     margin-top: 15px;
     border: none;
     text-transform: uppercase;
@@ -54,7 +59,7 @@
 }
 
 
-.book_section .form_container button:hover {
+.book_section .bookform_container button:hover {
     background-color: darkorange;
 }
 
