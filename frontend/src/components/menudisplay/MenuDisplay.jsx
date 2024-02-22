@@ -23,22 +23,24 @@ const MenuDisplay = () => {
         fetchCategories();
     }, []);
 
+    // Fetch products by selected category
     useEffect(() => {
-        // Function to fetch products from the backend
-        const fetchProducts = async () => {
+        const fetchProductsByCategory = async () => {
             try {
-                // Use Axios or fetch to get the product data
-                const response = await fetch('http://localhost:3003/api/get/products');
+                let url = 'http://localhost:3003/api/get/products';
+                if (selectedCategory) {
+                    url += `/category/${selectedCategory}`; // Update this line based on your actual API
+                }
+                const response = await fetch(url);
                 const data = await response.json();
-                // console.log(data); // to debug
                 setProducts(data);
             } catch (error) {
                 console.error('Error fetching products:', error);
             }
         };
 
-        fetchProducts();
-    }, []); // Empty dependency array means this effect runs once on mount
+        fetchProductsByCategory();
+    }, [selectedCategory]); // React to changes in selectedCategory
 
     return (
         <div className='menudisplay'>
@@ -56,9 +58,13 @@ const MenuDisplay = () => {
                 ))}
             </div>
             <div className='card-wrapper'>
-                {products.map((product) => (
-                    <SushiCard key={product._id} product={product} />
-                ))}
+                {products.length > 0 ? (
+                    products.map((product) => (
+                        <SushiCard key={product._id} product={product} />
+                    ))
+                ) : (
+                    <p className='no-product-message'>No products found for this category.</p>
+                )}
             </div>
         </div>
     )

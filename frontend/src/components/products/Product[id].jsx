@@ -2,7 +2,6 @@ import React from 'react'
 import './product[id].css';
 
 const Product = () => {
-    // const [size, setSize] = useState(0);
     const sushi = {
         id: 1,
         img: "../caliroll.png",

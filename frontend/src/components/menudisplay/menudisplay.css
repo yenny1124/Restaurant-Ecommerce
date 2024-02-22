@@ -43,7 +43,7 @@
 
 .menudisplay hr {
     width: 200px;
-    height: 10px;
+    height: 5px;
     border-radius: 10px;
     background: ivory;
     margin-bottom: 30px;
@@ -56,4 +56,8 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.menudisplay .card-wrapper .no-product-message {
+    color: white;
 }
