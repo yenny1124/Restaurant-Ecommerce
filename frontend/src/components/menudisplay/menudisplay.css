@@ -4,7 +4,33 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    height: 200vh;
+    height: 330vh;
+}
+
+
+.menudisplay .category-bar {
+    display: flex;
+    gap: 15px;
+    margin-top: -20px;
+    margin-bottom: 80px;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+
+.menudisplay .category-bar button {
+    padding: 5px 10px;
+    background-color: ivory;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.menudisplay .category-bar button.active-category {
+    background-color: orange;
+    color: white;
 }
 
 .menudisplay .title {
@@ -17,7 +43,7 @@
 
 .menudisplay hr {
     width: 200px;
-    height: 5px;
+    height: 10px;
     border-radius: 10px;
     background: ivory;
     margin-bottom: 30px;
