@@ -1,25 +1,42 @@
-import React from 'react'
 import './product[id].css';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 const Product = () => {
-    const sushi = {
-        id: 1,
-        img: "../caliroll.png",
-        name: "California Roll",
-        price: [8.75],
-        desc: "Avacado, Crabmeat, Cucumber",
-    };
+    const { id } = useParams();
+    const [product, setProduct] = useState(null);
+
+    useEffect(() => {
+        const fetchProduct = async () => {
+            try {
+                // Adjust the URL to match your API endpoint for fetching a product by ID
+                const response = await fetch(`http://localhost:3003/api/get/product/${id}`);
+                const data = await response.json();
+                setProduct(data);
+            } catch (error) {
+                console.error('Error fetching product:', error);
+            }
+        };
+
+        fetchProduct();
+    }, [id]); // Re-fetch when `id` changes
+
+    if (!product) {
+        return <p>Loading...</p>; // Display loading state or any placeholder
+    }
+
     return (
         <div className='product-container'>
             <div className='left'>
                 <div className='product-img-container'>
-                    <img className='product-img' src={sushi.img} objectFit="contain" layout="fill" alt="" />
+                    {/* Ensure your API returns an accessible image URL */}
+                    <img className='product-img' src={product.img} alt={product.name} />
                 </div>
             </div>
             <div className='right'>
-                <h1 className='sushi-title'>{sushi.name}</h1>
-                <span className='price'>${sushi.price}</span>
-                <p className='desc'>{sushi.desc}</p>
+                <h1 className='sushi-title'>{product.name}</h1>
+                <span className='price'>${product.prices}</span>
+                <p className='desc'>{product.desc}</p>
                 <h3 className='choose'>Choose options for ingredients</h3>
                 <div className='ingredients'>
                     <div className='ingredients-option'>

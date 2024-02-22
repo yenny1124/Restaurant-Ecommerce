@@ -60,7 +60,7 @@ const MenuDisplay = () => {
             <div className='card-wrapper'>
                 {products.length > 0 ? (
                     products.map((product) => (
-                        <SushiCard key={product._id} product={product} />
+                        <SushiCard key={product._id} product={product}></SushiCard>
                     ))
                 ) : (
                     <p className='no-product-message'>No products found for this category.</p>

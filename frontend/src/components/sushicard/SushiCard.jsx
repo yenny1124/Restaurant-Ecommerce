@@ -1,10 +1,16 @@
 import React from 'react'
 import './sushicard.css';
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 const SushiCard = ({ product }) => {
+    let navigate = useNavigate();
+
+    const navigateToProductDetail = () => {
+        navigate(`/product/${product._id}`);
+    };
+
     return (
-        <div className='sushicard-container'>
+        <div className='sushicard-container' onClick={navigateToProductDetail}>
             <img className='sushi-img' src={product.img} alt={product.name} />
             <h3 className='sushi-title'>{product.name}</h3>
             <p className='sushi-price'>${product.prices}</p>

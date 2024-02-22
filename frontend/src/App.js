@@ -9,7 +9,7 @@ import Cart from './pages/Cart';
 import OrderOnline from './pages/OrderOnline';
 import Footer from './components/footer/Footer';
 import BookingDone from './pages/BookingDone';
-import Product from './components/products/Product[id]';
+import ProductDetail from './components/products/Product[id]';
 import Order from './components/orders/Order[id]';
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
 
 
           <Route path='/order' element={<Order />} />
-          <Route path='/product' element={<Product />} />
+          <Route path='/product/:id' element={<ProductDetail />} />
 
         </Routes>
         <Footer />
