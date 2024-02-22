@@ -2,22 +2,13 @@ import React from 'react'
 import './sushicard.css';
 import { Link } from 'react-router-dom'
 
-const SushiCard = () => {
-    // const images = [
-    //     "../caliroll.png",
-    //     "../spicytunaroll.png",
-    //     "../yellowtailroll.png",
-    // ];
-
+const SushiCard = ({ product }) => {
     return (
         <div className='sushicard-container'>
-            <img className='sushi-img' src='../caliroll.png' />
-            <h1 className='sushi-title'>California Roll</h1>
-            <span className='sushi-price'>$8.75</span>
-            <p className='sushi-desc'>
-                Avacado, Crabmeat, Cucumber
-            </p>
-
+            <img className='sushi-img' src={product.img} alt={product.name} />
+            <h3 className='sushi-title'>{product.name}</h3>
+            <p className='sushi-price'>${product.prices}</p>
+            <p className='sushi-desc'>{product.desc}</p>
         </div>
     )
 }

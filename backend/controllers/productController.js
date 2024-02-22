@@ -31,6 +31,25 @@ module.exports.createCategory = async (req, res) => {
     }
 };
 
+// Function to get products by category ID
+module.exports.getProductsByCategoryID = async (req, res) => {
+    try {
+        const categoryId = req.params.categoryId; // Access the categoryId provided in the route parameter
+
+        // Find all products that have a category field equal to categoryId
+        const products = await ProductModel.find({ category: categoryId });
+
+        if (!products.length) {
+            return res.status(404).json({ message: "No products found for this category." });
+        }
+
+        res.status(200).json(products);
+    } catch (error) {
+        console.error("Error fetching products by category ID:", error);
+        res.status(500).json({ message: "Failed to fetch products by category ID", error: error.message });
+    }
+};
+
 // Function to get a single category by its ID
 module.exports.getCategoryById = async (req, res) => {
     try {
@@ -108,19 +127,33 @@ module.exports.getProductById = async (req, res) => {
     }
 }
 
-// save(create) a product 
-module.exports.saveProduct = async (req, res) => {
-    console.log(req.body); // Temporarily added for debugging purposes
-    // Directly use req.body instead of destructuring it into { product }
-    ProductModel.create(req.body)
-        .then((data) => {
-            console.log("Saved Successfully...")
-            res.status(201).send(data)
-        })
-        .catch((err) => {
-            console.log(err)
-            res.send({ error: err, msg: "Something went wrong!" })
+// create a product by category
+module.exports.createProductByCategory = async (req, res) => {
+    const { name, desc, img, prices, categoryName } = req.body;
+
+    try {
+        // Find the category by its name
+        const category = await CategoryModel.findOne({ name: categoryName });
+        if (!category) {
+            return res.status(404).json({ message: "Category not found" });
+        }
+
+        // Create a new product with the category's _id
+        const newProduct = new ProductModel({
+            name,
+            desc,
+            img,
+            prices,
+            category: category._id // Assign the category's _id here
         });
+
+        // Save the new product
+        await newProduct.save();
+        res.status(201).json({ message: "Product created successfully", newProduct });
+    } catch (error) {
+        console.error("Error creating product:", error);
+        res.status(500).json({ message: "Failed to create product", error: error.message });
+    }
 }
 
 // update a product

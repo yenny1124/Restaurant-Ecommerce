@@ -1,11 +1,11 @@
 .sushicard-container {
     width: 22%;
-    padding: 10px;
+    margin-top: -20px;
+    margin-bottom: -20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 40px;
     cursor: pointer;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .sushicard-container .sushi-title {
-    padding-top: 20px;
+    padding-top: 10px;
     font-size: 18px;
     font-weight: bold;
     color: #d1411e;
@@ -34,7 +34,7 @@
     color: ivory;
 }
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
     .sushicard-container {
         width: 100%;
     }
@@ -47,4 +47,4 @@
     .sushi-desc {
         font-size: 24px;
     }
-}
+} */
