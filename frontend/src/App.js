@@ -11,29 +11,32 @@ import Footer from './components/footer/Footer';
 import BookingDone from './pages/BookingDone';
 import ProductDetail from './components/products/Product[id]';
 import Order from './components/orders/Order[id]';
+import { CartProvider } from './pages/CartContext';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/menu' element={<Menu />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/booktable' element={<BookTable />} />
-          <Route path='/bookingdone' element={<BookingDone />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/orderonline' element={<OrderOnline />} />
+    <CartProvider> {/* Wrap the entire app with CartProvider */}
+      <div className="App">
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/menu' element={<Menu />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/booktable' element={<BookTable />} />
+            <Route path='/bookingdone' element={<BookingDone />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/orderonline' element={<OrderOnline />} />
 
 
-          <Route path='/order' element={<Order />} />
-          <Route path='/product/:id' element={<ProductDetail />} />
+            <Route path='/order' element={<Order />} />
+            <Route path='/product/:id' element={<ProductDetail />} />
 
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </div>
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </div>
+      /</CartProvider>
   );
 }
 
