@@ -64,3 +64,8 @@
     font-weight: 500;
     cursor: pointer;
 }
+
+.right .add-button:hover {
+    background-color: #a8322c;
+    /* Darker shade on hover */
+}

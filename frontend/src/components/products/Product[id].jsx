@@ -1,8 +1,10 @@
 import './product[id].css';
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useCart } from '../../pages/CartContext';
 
 const Product = () => {
+    const { addToCart } = useCart();
     const { id } = useParams();
     const [product, setProduct] = useState(null);
 
@@ -24,6 +26,11 @@ const Product = () => {
     if (!product) {
         return <p>Loading...</p>; // Display loading state or any placeholder
     }
+
+    const handleAddToCart = (e) => {
+        e.stopPropagation(); // Prevent navigate when clicking "Add to Cart"
+        addToCart(product);
+    };
 
     return (
         <div className='product-container'>
@@ -69,7 +76,7 @@ const Product = () => {
                 </div>
                 <div className='add-to-cart'>
                     <input type="number" defaultValue={1} className='quantity' />
-                    <button className='add-button'>Add to Cart</button>
+                    <button className='add-button' onClick={handleAddToCart}>Add to Cart</button>
                 </div>
             </div>
         </div>
