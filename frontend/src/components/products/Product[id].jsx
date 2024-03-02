@@ -7,6 +7,8 @@ const Product = () => {
     const { addToCart } = useCart();
     const { id } = useParams();
     const [product, setProduct] = useState(null);
+    // Initialize the quantity state with 1 as a default value
+    const [quantity, setQuantity] = useState(1);
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -29,7 +31,13 @@ const Product = () => {
 
     const handleAddToCart = (e) => {
         e.stopPropagation(); // Prevent navigate when clicking "Add to Cart"
-        addToCart(product);
+        // Add the product along with the selected quantity to the cart
+        addToCart({ ...product, quantity });
+    };
+
+    // Update quantity state based on user input
+    const handleQuantityChange = (e) => {
+        setQuantity(parseInt(e.target.value, 10) || 1);
     };
 
     return (
@@ -75,7 +83,13 @@ const Product = () => {
                     </div>
                 </div>
                 <div className='add-to-cart'>
-                    <input type="number" defaultValue={1} className='quantity' />
+                    <input
+                        type="number"
+                        value={quantity}
+                        onChange={handleQuantityChange}
+                        className='quantity'
+                        min="1" // Ensure the quantity can't be less than 1
+                    />
                     <button className='add-button' onClick={handleAddToCart}>Add to Cart</button>
                 </div>
             </div>

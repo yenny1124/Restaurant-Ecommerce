@@ -8,15 +8,23 @@ export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
 
     const addToCart = (product) => {
-        const existingItem = cartItems.find((item) => item._id === product._id);
-        if (existingItem) {
-            // Update the quantity if the product is already in the cart
-            setCartItems(cartItems.map((item) =>
-                item._id === product._id ? { ...item, quantity: item.quantity + 1 } : item
-            ));
+        const existingItemIndex = cartItems.findIndex((item) => item._id === product._id);
+
+        if (existingItemIndex !== -1) {
+            // If the product already exists in the cart, update its quantity
+            const updatedCartItems = [...cartItems];
+            const existingItem = updatedCartItems[existingItemIndex];
+            const updatedItem = {
+                ...existingItem,
+                // Add the specified quantity to the existing quantity
+                quantity: existingItem.quantity + product.quantity
+            };
+            updatedCartItems[existingItemIndex] = updatedItem;
+            setCartItems(updatedCartItems);
         } else {
-            // Add the product to the cart with quantity 1 if it's not already in the cart
-            setCartItems([...cartItems, { ...product, quantity: 1 }]);
+            // If it's a new item, add it to the cart
+            // Assume the product includes the desired quantity
+            setCartItems([...cartItems, product]);
         }
     };
 
