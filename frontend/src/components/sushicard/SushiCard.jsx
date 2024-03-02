@@ -24,7 +24,7 @@ const SushiCard = ({ product }) => {
             <h3 className='sushi-title'>{product.name}</h3>
             <p className='sushi-price'>${product.prices}</p>
             <p className='sushi-desc'>{product.desc}</p>
-            <button onClick={handleAddToCart}>Add to Cart</button>
+            <button className="add-to-cart-btn" onClick={handleAddToCart}>Add to Cart</button>
         </div>
 
     )
