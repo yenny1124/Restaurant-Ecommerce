@@ -1,10 +1,21 @@
 import React from 'react'
 import './shoppingcart.css';
 import { useCart } from '../../pages/CartContext';
-
+import { useNavigate } from 'react-router-dom';
 
 const ShoppingCart = () => {
+    let navigate = useNavigate();
     const { cartItems } = useCart();
+
+    const navigateToMenuPage = () => {
+        navigate(`/menu`);
+    };
+
+    const navigateToCheckOutPage = () => {
+        navigate(`/checkout`);
+    };
+
+
     // Correctly calculate the total price of items in the cart
     const calculateTotal = () => cartItems.reduce((acc, item) => {
         // Ensure 'item.prices' is a number and item.quantity is accounted for
@@ -37,13 +48,11 @@ const ShoppingCart = () => {
                                     </div>
                                 </td>
                                 <td>
-                                    <span className='price'>
-                                        ${item.prices}
-                                    </span>
+                                    <span className='name'>{item.name}</span>
                                 </td>
                                 <td>
                                     {/* Display options if applicable */}
-                                    <span className='options'>Options Placeholder</span>
+                                    <span className='options'></span>
                                 </td>
                                 <td>
                                     <span className='price'>${item.prices}</span>
@@ -71,7 +80,8 @@ const ShoppingCart = () => {
                     <div className='totalText'>
                         <b className='totalTextTitle'>Total:</b>${calculateTotal()}
                     </div>
-                    <button className='button'>CHECKOUT NOW!</button>
+                    <button className='button' onClick={navigateToCheckOutPage}>CHECKOUT</button>
+                    <button className='button' onClick={navigateToMenuPage}>ADD MORE</button>
                 </div>
             </div>
         </div>

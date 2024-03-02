@@ -6,6 +6,8 @@ import Menu from './pages/Menu';
 import About from './pages/About';
 import BookTable from './pages/BookTable';
 import Cart from './pages/Cart';
+import CheckOut from './pages/CheckOut';
+
 import OrderOnline from './pages/OrderOnline';
 import Footer from './components/footer/Footer';
 import BookingDone from './pages/BookingDone';
@@ -26,6 +28,7 @@ function App() {
             <Route path='/booktable' element={<BookTable />} />
             <Route path='/bookingdone' element={<BookingDone />} />
             <Route path='/cart' element={<Cart />} />
+            <Route path='/checkout' element={<CheckOut />} />
             <Route path='/orderonline' element={<OrderOnline />} />
 
 

@@ -1,8 +1,13 @@
 import React from 'react'
 import './hero.css'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Hero = () => {
+    let navigate = useNavigate();
+    const navigateToMenuPage = () => {
+        navigate(`/menu`);
+    };
+
     return (
         <div className='hero'>
             <div className='hero-left'>
@@ -16,7 +21,7 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className='hero-ordernow'>
-                    <Link to='/orderonline'><button>Order Now</button></Link>
+                    <button onClick={navigateToMenuPage}>Order Now</button>
                 </div>
             </div>
             <div className='hero-right'>

@@ -1,23 +1,23 @@
 .shoppingcart-container {
-    background: ivory;
+    background: white;
     padding: 50px;
     display: flex;
 }
 
-.left {
+.shoppingcart-container .left {
     flex: 2;
 }
 
 
-.left .cart-image {
-    width: 80%;
-    height: 80%;
-    position: relative;
-}
-
-.cart-table {
+.shoppingcart-container .left .cart-table {
     width: 100%;
     border-spacing: 20px;
+}
+
+.shoppingcart-container .left .cart-image {
+    width: 40%;
+    height: 40%;
+    position: relative;
 }
 
 .name {

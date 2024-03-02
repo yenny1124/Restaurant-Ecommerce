@@ -1,8 +1,15 @@
 import React, { useState } from 'react'
 import './navbar.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+
 export const Navbar = () => {
     const [menu, setMenu] = useState("home")
+
+    let navigate = useNavigate();
+    const navigateToMenuPage = () => {
+        navigate(`/menu`);
+    };
+
     return (
         <div className='navbar'>
             <div className='nav-logo'>
@@ -16,7 +23,7 @@ export const Navbar = () => {
                 <li onClick={() => { setMenu("booktable") }}><Link style={{ textDecoration: 'none', color: 'white' }} to='/booktable'>Book Table</Link>{menu === "booktable" ? <hr /> : <></>}</li>
             </ul>
             <div className='nav-order'>
-                <Link to='/orderonline'><button>Order Online</button></Link>
+                <button onClick={navigateToMenuPage}>Order Online</button>
                 <Link to='/cart'><i class="fa fa-shopping-cart" /></Link>
                 <div className='nav-cart-count'>0</div>
                 <Link to='/'><i class="fa fa-phone" aria-hidden="true"></i></Link>
