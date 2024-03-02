@@ -35,7 +35,7 @@
 }
 
 .sushicard-container .add-to-cart-btn {
-    padding: 10px 20px;
+    padding: 5px 10px;
     background-color: #d1411e;
     /* Default background color */
     color: white;
@@ -44,7 +44,6 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     /* Smooth transition for background color */
-    margin-top: 10px;
     /* Spacing from the description */
     border-radius: 5px;
     /* Optional: rounded corners */

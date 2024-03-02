@@ -52,7 +52,7 @@ const Product = () => {
                 <h1 className='sushi-title'>{product.name}</h1>
                 <span className='price'>${product.prices}</span>
                 <p className='desc'>{product.desc}</p>
-                <h3 className='choose'>Choose options for ingredients</h3>
+                {/* <h3 className='choose'>Choose options for ingredients</h3>
                 <div className='ingredients'>
                     <div className='ingredients-option'>
                         <input
@@ -81,7 +81,7 @@ const Product = () => {
                         />
                         <label className='label' htmlFor="cucumber">No Cucumber</label>
                     </div>
-                </div>
+                </div> */}
                 <div className='add-to-cart'>
                     <input
                         type="number"
