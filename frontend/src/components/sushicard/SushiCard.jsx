@@ -13,7 +13,8 @@ const SushiCard = ({ product }) => {
 
     const handleAddToCart = (e) => {
         e.stopPropagation(); // Prevent navigate when clicking "Add to Cart"
-        addToCart(product);
+        // Explicitly set quantity to 1 when adding to cart
+        addToCart({ ...product, quantity: 1 });
     };
 
 
