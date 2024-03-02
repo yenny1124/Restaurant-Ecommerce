@@ -4,7 +4,9 @@ import SushiCard from '../sushicard/SushiCard'
 
 const MenuDisplay = () => {
     const [categories, setCategories] = useState([]);
-    const [selectedCategory, setSelectedCategory] = useState('');
+    // Assuming "sushiRollsId" is the ID for "Sushi Rolls" category.
+    const sushiRollsId = "65d5b64b533e405f389db50d"; // Replace this with the actual ID from your database
+    const [selectedCategory, setSelectedCategory] = useState(sushiRollsId);
     const [products, setProducts] = useState([]);
 
     // fetch categories 
@@ -25,21 +27,22 @@ const MenuDisplay = () => {
 
     // Fetch products by selected category
     useEffect(() => {
-        const fetchProductsByCategory = async () => {
-            try {
-                let url = 'http://localhost:3003/api/get/products';
-                if (selectedCategory) {
-                    url += `/category/${selectedCategory}`; // Update this line based on your actual API
+        if (selectedCategory) { // Only fetch products if a category is selected
+            const fetchProductsByCategory = async () => {
+                try {
+                    const url = `http://localhost:3003/api/get/products/category/${selectedCategory}`;
+                    const response = await fetch(url);
+                    const data = await response.json();
+                    setProducts(data);
+                } catch (error) {
+                    console.error('Error fetching products:', error);
                 }
-                const response = await fetch(url);
-                const data = await response.json();
-                setProducts(data);
-            } catch (error) {
-                console.error('Error fetching products:', error);
-            }
-        };
+            };
 
-        fetchProductsByCategory();
+            fetchProductsByCategory();
+        } else {
+            setProducts([]); // Clear products if no category is selected
+        }
     }, [selectedCategory]); // React to changes in selectedCategory
 
     return (
