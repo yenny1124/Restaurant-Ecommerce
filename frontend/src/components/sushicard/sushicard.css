@@ -36,9 +36,9 @@
 
 .sushicard-container .add-to-cart-btn {
     padding: 5px 10px;
-    background-color: #d1411e;
+    background-color: orange;
     /* Default background color */
-    color: white;
+    color: black;
     /* Text color */
     border: none;
     cursor: pointer;
@@ -50,6 +50,6 @@
 }
 
 .sushicard-container .add-to-cart-btn:hover {
-    background-color: #a8322c;
+    background-color: darkorange;
     /* Darker shade on hover */
 }
