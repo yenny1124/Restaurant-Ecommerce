@@ -12,7 +12,7 @@ import OrderOnline from './pages/OrderOnline';
 import Footer from './components/footer/Footer';
 import BookingDone from './pages/BookingDone';
 import ProductDetail from './components/products/Product[id]';
-import Order from './components/orders/Order[id]';
+import OrderDetail from './components/orders/Order[id]';
 import { CartProvider } from './pages/CartContext';
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
             <Route path='/orderonline' element={<OrderOnline />} />
 
 
-            <Route path='/order' element={<Order />} />
+            <Route path='/order/:id' element={<OrderDetail />} />
             <Route path='/product/:id' element={<ProductDetail />} />
 
           </Routes>

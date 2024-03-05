@@ -19,7 +19,10 @@ const ShoppingCart = () => {
     // Correctly calculate the total price of items in the cart
     const calculateTotal = () => cartItems.reduce((acc, item) => {
         // Ensure 'item.prices' is a number and item.quantity is accounted for
-        return acc + (item.prices * (item.quantity || 1));
+        const total = acc + (item.prices * (item.quantity || 1));
+        // Save the total in localStorage
+        localStorage.setItem('cartTotal', total.toString());
+        return total;
     }, 0);
 
     return (

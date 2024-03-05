@@ -11,6 +11,17 @@ export const CartProvider = ({ children }) => {
         return savedCartItems ? JSON.parse(savedCartItems) : [];
     });
 
+    // New clearCart function
+    const clearCart = () => {
+        setCartItems([]);
+    };
+
+    // Define calculateTotal method
+    const calculateTotal = () => {
+        return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    };
+
+
     // Save cart items to local storage whenever the cartItems state changes
     useEffect(() => {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
@@ -65,7 +76,7 @@ export const CartProvider = ({ children }) => {
     };
 
     return (
-        <CartContext.Provider value={{ cartItems, addToCart, deleteFromCart, updateQuantity, updateAdditionalDetails }}>
+        <CartContext.Provider value={{ cartItems, addToCart, deleteFromCart, updateQuantity, updateAdditionalDetails, calculateTotal, clearCart }}>
             {children}
         </CartContext.Provider>
     );

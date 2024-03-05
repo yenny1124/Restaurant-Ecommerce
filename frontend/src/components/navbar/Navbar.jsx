@@ -1,11 +1,18 @@
 import React, { useState } from 'react'
 import './navbar.css'
 import { Link, useNavigate } from 'react-router-dom'
+import { useCart } from '../../pages/CartContext'; // Adjust the import path based on your file structure
 
 export const Navbar = () => {
     const [menu, setMenu] = useState("home")
-
     let navigate = useNavigate();
+
+    // Use the cart context
+    const { cartItems } = useCart();
+
+    // Calculate the total number of items in the cart
+    const totalCartItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+
     const navigateToMenuPage = () => {
         navigate(`/menu`);
     };
@@ -24,9 +31,12 @@ export const Navbar = () => {
             </ul>
             <div className='nav-order'>
                 <button onClick={navigateToMenuPage}>Order Online</button>
-                <Link to='/cart'><i class="fa fa-shopping-cart" /></Link>
-                <div className='nav-cart-count'>0</div>
-                <Link to='/'><i class="fa fa-phone" aria-hidden="true"></i></Link>
+                <Link style={{ textDecoration: 'none', color: 'white' }} to='/cart'>
+                    <i className="fa fa-shopping-cart" />
+                    {/* Show cart count */}
+                    {totalCartItems > 0 && <div className='nav-cart-count'>{totalCartItems}</div>}
+                </Link>
+                <Link to='/'><i className="fa fa-phone" aria-hidden="true"></i></Link>
             </div>
 
         </div>

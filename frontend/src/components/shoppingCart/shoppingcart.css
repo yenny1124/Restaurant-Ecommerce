@@ -1,5 +1,6 @@
 .shoppingcart-container {
     background: white;
+    justify-content: space-between;
     padding: 50px;
     display: flex;
 }
