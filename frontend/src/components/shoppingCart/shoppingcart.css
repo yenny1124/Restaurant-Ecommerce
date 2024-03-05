@@ -20,15 +20,44 @@
     position: relative;
 }
 
+
+
 .name {
     font-weight: 500;
     color: #d1411e;
     font-size: 18px;
 }
 
+.additional-details-textarea {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
 .total {
     font-weight: 500;
     font-size: 18px;
+}
+
+.shoppingcart-container .left .quantity-input {
+    width: 50%;
+}
+
+.shoppingcart-container .delete-btn {
+    margin-right: 50px;
+    padding: 5px 10px;
+    background-color: orange;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.shoppingcart-container .delete-btn:hover {
+    background-color: darkorange;
 }
 
 .right {

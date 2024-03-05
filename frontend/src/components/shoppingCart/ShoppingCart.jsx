@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const ShoppingCart = () => {
     let navigate = useNavigate();
-    const { cartItems } = useCart();
+    const { cartItems, deleteFromCart, updateQuantity, updateAdditionalDetails } = useCart();
 
     const navigateToMenuPage = () => {
         navigate(`/menu`);
@@ -28,12 +28,13 @@ const ShoppingCart = () => {
                 <table className='cart-table'>
                     <thead>
                         <tr className='trTitle'>
-                            <th>Product</th>
+                            <th>Item</th>
                             <th>Name</th>
                             <th>Options</th>
                             <th>Price</th>
                             <th>Quantity</th>
                             <th>Total</th>
+                            <th>Action</th> {/* New column for delete action */}
                         </tr>
                     </thead>
                     <tbody>
@@ -52,7 +53,14 @@ const ShoppingCart = () => {
                                 </td>
                                 <td>
                                     {/* Display options if applicable */}
-                                    <span className='options'></span>
+                                    <span className='options'>
+                                        <textarea
+                                            value={item.additionalDetails || ''}
+                                            onChange={(e) => updateAdditionalDetails(item._id, e.target.value)}
+                                            placeholder="Any special requests?"
+                                            className="additional-details-textarea"
+                                        />
+                                    </span>
                                 </td>
                                 <td>
                                     <span className='price'>${item.prices}</span>
@@ -64,6 +72,18 @@ const ShoppingCart = () => {
                                     <span className='total'>
                                         ${(item.prices * (item.quantity || 1))}
                                     </span>
+                                </td>
+                                <td>
+                                    <input
+                                        type="number"
+                                        value={item.quantity}
+                                        onChange={(e) => updateQuantity(item._id, parseInt(e.target.value))}
+                                        className="quantity-input"
+                                        min="1"
+                                    />
+                                </td>
+                                <td>
+                                    <button className="delete-btn" onClick={() => deleteFromCart(item._id)}>Delete</button>
                                 </td>
                             </tr>
                         ))}
