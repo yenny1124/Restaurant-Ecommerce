@@ -41,7 +41,7 @@ const Reservation = () => {
         }
 
         try {
-            const response = await fetch('http://localhost:3003/api/save/reservation', {
+            const response = await fetch('https://restaurant-ecommerce.onrender.com/api/save/reservation', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

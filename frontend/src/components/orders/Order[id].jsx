@@ -9,7 +9,7 @@ const Order = () => {
     useEffect(() => {
         const fetchOrderDetails = async () => {
             try {
-                const response = await fetch(`http://localhost:3004/api/get/order/${orderId}`); // Adjust the URL as needed
+                const response = await fetch(`https://restaurant-ecommerce.onrender.com/api/get/order/${orderId}`); // Adjust the URL as needed
                 if (!response.ok) throw new Error('Failed to fetch order details');
                 const data = await response.json();
                 setOrderDetails(data);

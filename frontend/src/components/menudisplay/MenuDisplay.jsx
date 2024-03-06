@@ -13,7 +13,7 @@ const MenuDisplay = () => {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const response = await fetch('http://localhost:3003/api/get/categories'); // Adjust URL as needed
+                const response = await fetch('https://restaurant-ecommerce.onrender.com/api/get/categories'); // Adjust URL as needed
                 const data = await response.json();
                 // console.log(data); // to debug
                 setCategories(data);
@@ -30,7 +30,7 @@ const MenuDisplay = () => {
         if (selectedCategory) { // Only fetch products if a category is selected
             const fetchProductsByCategory = async () => {
                 try {
-                    const url = `http://localhost:3003/api/get/products/category/${selectedCategory}`;
+                    const url = `https://restaurant-ecommerce.onrender.com/api/get/products/category/${selectedCategory}`;
                     const response = await fetch(url);
                     const data = await response.json();
                     setProducts(data);

@@ -14,7 +14,7 @@ const Product = () => {
         const fetchProduct = async () => {
             try {
                 // Adjust the URL to match your API endpoint for fetching a product by ID
-                const response = await fetch(`http://localhost:3003/api/get/product/${id}`);
+                const response = await fetch(`https://restaurant-ecommerce.onrender.com/api/get/product/${id}`);
                 const data = await response.json();
                 setProduct(data);
             } catch (error) {
