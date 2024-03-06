@@ -18,11 +18,11 @@ const Footer = () => {
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                                     <span>Location</span>
                                 </a>
-                                <a href="">
+                                <a href="/">
                                     <i class="fa fa-phone" aria-hidden="true"></i>
                                     <Link to='/'><span>Call +01 425 454 4313</span></Link>
                                 </a>
-                                <a href="">
+                                <a href="/">
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
                                     <Link to='/'><span>powermaju87@gmail.com</span></Link>
                                 </a>
@@ -32,8 +32,7 @@ const Footer = () => {
 
                     <div class="col">
                         <div class="footer-details">
-                            <a href="" class="footer-logo" style={{ textDecoration: 'none' }}>
-                                {/* <img src='../logo.png' /> */}
+                            <a href="/" class="footer-logo" style={{ textDecoration: 'none' }}>
                                 <p>Rolls & Rolls</p>
                             </a>
                             {/* <p>
@@ -41,10 +40,10 @@ const Footer = () => {
                                 <br />It uses a dictionary of over 200 Latin words, combined with
                             </p> */}
                             <div class="footer-social">
-                                <a href="">
+                                <a href="/">
                                     <i class="fa fa-facebook" aria-hidden="true"></i>
                                 </a>
-                                <a href="">
+                                <a href="/">
                                     <i class="fa fa-instagram" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -75,9 +74,9 @@ const Footer = () => {
                     <hr />
                     <p>
                         &copy; <span id="displayYear">2024</span> All Rights Reserved By
-                        <a href=""> Rolls and Rolls</a><br /><br />
+                        <a href="/"> Rolls and Rolls</a><br /><br />
                         &copy; <span id="displayYear">2024</span> Distributed By
-                        <a href="https://yeeunjamiechoi.netlify.com" target="_blank"> Yeeun Choi</a>
+                        <a href="https://yeeunjamiechoi.netlify.com" target="blank" rel="nonreferrer"> Yeeun Choi</a>
                     </p>
 
                 </div>

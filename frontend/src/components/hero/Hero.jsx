@@ -12,7 +12,7 @@ const Hero = () => {
         <div className='hero'>
             <div className='hero-left'>
                 <h2> Pure Freshness Served</h2>
-                <img className='sushi' src="/sushi.png" alt="" />
+                <img className='sushi' src="/sushi.png" alt="sushi" />
                 <div>
                     <div className='hand-sushi-icon'>
                         <em><p>"Experience</p>
@@ -25,7 +25,7 @@ const Hero = () => {
                 </div>
             </div>
             <div className='hero-right'>
-                <img className='sushiplatter' src="/sushiplatter.png" alt="" />
+                <img className='sushiplatter' src="/sushiplatter.png" alt="sishiplatter" />
             </div>
         </div >
     )

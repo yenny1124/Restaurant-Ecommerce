@@ -20,7 +20,7 @@ export const Navbar = () => {
     return (
         <div className='navbar'>
             <div className='nav-logo'>
-                <Link to='/'><img className='logo' src='../logo.png' /></Link>
+                <Link to='/'><img className='logo' src='../logo.png' alt='logo' /></Link>
                 <p>Rolls & Rolls</p>
             </div>
             <ul className='nav-menu'>
