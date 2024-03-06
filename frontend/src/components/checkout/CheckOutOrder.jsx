@@ -45,7 +45,7 @@ const CheckOutOrder = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:3004/api/save/order', {
+            const response = await fetch('http://localhost:3003/api/save/order', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
