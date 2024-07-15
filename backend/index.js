@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
     res.send('Jamies Project')
 })
 
-mongoose.connect("mongodb+srv://yenny1124:4237@cluster0.mtzjf.mongodb.net/Products?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://userID:password@cluster0.mtzjf.mongodb.net/Products?retryWrites=true&w=majority")
     .then(() => console.log("Connected to MongoDB"))
     .catch((err) => console.log(err))
 
